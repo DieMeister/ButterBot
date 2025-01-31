@@ -79,6 +79,7 @@ Below is a LID providing its structure as well as the basic embed layout for com
 }
 ```
 The minimal requirements for each are:
+
 LID
 ```json
 {
@@ -113,7 +114,6 @@ variables
     "embed": {},
     "file": {}
 }
-```
-Variable Information is provided 
+``` 
 # Static Database Extensions
 Static parts of the database are loaded separately for easier changes while the bot is running. Before they are loaded for the first time they are marked as `null` in the database.

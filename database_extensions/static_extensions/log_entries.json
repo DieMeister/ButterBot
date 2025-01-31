@@ -123,5 +123,30 @@
             "execution_channel_id": null,
             "execution_user_id": null
         }
+    },
+    "bot.events.on_ready": {
+        "importance": "info",
+        "guild_id": null,
+        "terminal": {
+            "message": "Bot is ready"
+        },
+        "embed": {
+            "author": {
+                "name": null,
+                "icon_url": null
+            },
+            "title": "Bot is ready",
+            "color": null,
+            "timestamp": null,
+            "footer": {
+                "text": "Bot"
+            },
+            "type": "rich"
+        },
+        "file": {
+            "log_id": null,
+            "timestamp": null,
+            "description": "Bot is ready"
+        }
     }
 }

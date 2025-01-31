@@ -36,6 +36,10 @@ class Bot(commands.Cog):
             })
             await ctx.send("Commands synced")
 
+    @commands.Cog.listener()
+    async def on_ready(self) -> None:
+        await self.bot.log("bot.events.on_ready", {"embed":{},"file":{}})
+
 
 async def setup(bot: "ButterBot") -> None:
     await bot.add_cog(Bot(bot))
