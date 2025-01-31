@@ -1,17 +1,20 @@
 import discord
-from discord import VoiceChannel, StageChannel, ForumChannel, TextChannel, CategoryChannel
 from discord.ext import commands
 
 import os
 from datetime import datetime, UTC
 from colorama import Fore
+from typing import TYPE_CHECKING, Optional, Union
 
 import tokens
 import internal
 
+if TYPE_CHECKING:
+    from discord.channel import VoiceChannel, StageChannel, ForumChannel, TextChannel, CategoryChannel
+
 
 class ButterBot(commands.Bot):
-    def get_guild_channel(self, guild_id: int, channel_id: int) -> VoiceChannel | StageChannel | ForumChannel | TextChannel | CategoryChannel | None:
+    def get_guild_channel(self, guild_id: int, channel_id: int) -> "Optional[Union[VoiceChannel, StageChannel, ForumChannel, TextChannel, CategoryChannel]]":
         guild = self.get_guild(guild_id)
         if guild is not None:
             channel = guild.get_channel(channel_id)
@@ -102,7 +105,8 @@ class ButterBot(commands.Bot):
         await bot.log("setup_hook.load_database", {"embed":{},"file":{}})
 
         for file in os.listdir("./cogs"):
-            await self.load_extension(f"cogs.{file[:-3]}")
+            if file.endswith(".py"):
+                await self.load_extension(f"cogs.{file[:-3]}")
         await bot.log("setup_hook.load_bot_extensions", {
             "embed": {
                 "description":f"{len(bot.cogs)} Cogs loaded"

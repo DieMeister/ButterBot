@@ -50,5 +50,78 @@
             "description": "BotExtensions loaded",
             "amount": null
         }
+    },
+    "bot.commands.sync": {
+        "importance": "info",
+        "guild_id": null,
+        "terminal": {
+            "message": "Commands synced"
+        },
+        "embed": {
+            "author": {
+                "name": null,
+                "icon_url": null
+            },
+            "title": "Commands synced",
+            "color": null,
+            "fields": [
+                {
+                    "name": "Amount",
+                    "value": "{amount_synced}",
+                    "inline": true
+                },
+                {
+                    "name": "Command",
+                    "value": "\u200B",
+                    "inline": false
+                },
+                {
+                    "name": "CommandName",
+                    "value": "sync",
+                    "inline": true
+                },
+                {
+                    "name": "CommandType",
+                    "value": "Developer",
+                    "inline": true
+                },
+                {
+                    "name": "**__executed in/by__**",
+                    "value": "\u200B",
+                    "inline": false
+                },
+                {
+                    "name": "Guild",
+                    "value": "`{ctx.guild.name}`\n`{ctx.guild.id}`",
+                    "inline": true
+                },
+                {
+                    "name": "Channel",
+                    "value": "`{ctx.channel.name}`\n`{ctx.channel.id}`",
+                    "inline": true
+                },
+                {
+                    "name": "User",
+                    "value": "`{ctx.author.name}`\n`{ctx.author.id}`",
+                    "inline": true
+                }
+            ],
+            "timestamp": null,
+            "footer": {
+                "text": "Bot"
+            },
+            "type": "rich"
+        },
+        "file": {
+            "log_id": null,
+            "timestamp": null,
+            "description": "Commands synced",
+            "amount": null,
+            "command_name": "sync",
+            "command_type": "developer",
+            "execution_guild_id": null,
+            "execution_channel_id": null,
+            "execution_user_id": null
+        }
     }
 }
