@@ -1,0 +1,54 @@
+{
+    "setup_hook.load_database": {
+        "importance": "info",
+        "guild_id": null,
+        "terminal": {
+            "message": "Database and its extensions loaded"
+        },
+        "embed": {
+            "author": {
+                "name": null,
+                "icon_url": null
+            },
+            "title": "Database and its extensions loaded",
+            "color": null,
+            "timestamp": null,
+            "footer": {
+                "text": "main"
+            },
+            "type": "rich"
+        },
+        "file": {
+            "log_id": null,
+            "timestamp": null,
+            "description": "Database and its extensions loaded"
+        }
+    },
+    "setup_hook.load_bot_extensions": {
+        "importance": "info",
+        "guild_id": null,
+        "terminal": {
+            "message": "BotExtensions loaded"
+        },
+        "embed": {
+            "author": {
+                "name": null,
+                "icon_url": null
+            },
+            "title": "BotExtensions loaded",
+            "description": "{len(bot.cogs)} Cogs loaded",
+            "color": null,
+            "timestamp": null,
+            "footer": {
+                "text": "main"
+            },
+            "type": "rich"
+        },
+        "file": {
+            "log_id": null,
+            "timestamp": null,
+            "description": "BotExtensions loaded",
+            "amount": null
+        }
+    }
+}

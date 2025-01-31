@@ -1,0 +1,13 @@
+{
+    "static": {
+        "log_entries": null
+    },
+    "bot": {
+        "log": {
+            "log_count": 0,
+            "log_guild_id": 1184258385768611951,
+            "log_channel_id": 1309940003656433685
+        }
+    },
+    "guilds": {}
+}
